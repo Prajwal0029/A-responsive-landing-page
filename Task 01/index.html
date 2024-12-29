@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prajwal's Landing Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="index">
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Prajwal's Landing Page</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item" data-bg="white">
+                        <a class="nav-link" href="homee.html">Home</a> <!-- Active class for index.html -->
+                    </li>
+                    <li class="nav-item" data-bg="#f0f0f0">
+                        <a class="nav-link" href="overview.html">Overview</a>
+                    </li>
+                    <li class="nav-item" data-bg="#d0d0d0">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item" data-bg="#c0c0c0">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="leftWrapper">
+                    <div class="tri"></div>
+                    <div class="leftBox">
+                        <h3>Hope Paws Initiative</h3>
+                        <p>Hope Paws Initiative is a compassionate nonprofit organization dedicated to rescuing, rehabilitating, and rehoming animals in need. Our mission is to provide a safe haven for abandoned, abused, and neglected pets while fostering a culture of empathy and responsible pet ownership.</p>
+                        <button class="btn btn-primary">Adopt a Pet Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="rightWrapper">
+                    <div class="box1"></div>
+                    <div class="box2"></div>
+                    <div class="rightBox clearfix">
+                        <div class="rightimg float-left">
+                            <img src="donation.png" alt="Make a Donation">
+                        </div>
+                        <div class="righttext float-left">
+                            <h1>Make a Donation</h1>
+                            <p>Your generosity fuels our work. Donations go towards rescue operations, medical care, food, and shelter for animals in need.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        // GSAP Animations for Page Load
+
+        // Fade in the main text
+        gsap.from(".leftBox h3", {
+            duration: 1,
+            opacity: 0,
+            y: -50,
+            ease: "power4.out",
+        });
+
+        gsap.from(".leftBox p", {
+            duration: 1,
+            opacity: 0,
+            y: -50,
+            delay: 0.5,
+            ease: "power4.out",
+        });
+
+        gsap.from(".leftBox .btn", {
+            duration: 1,
+            opacity: 0,
+            y: 50,
+            delay: 1,
+            ease: "power4.out",
+        });
+
+        // Slide in the donation section
+        gsap.from(".rightBox", {
+            duration: 1.5,
+            opacity: 0,
+            x: 100,
+            ease: "power4.out",
+            delay: 1,
+        });
+
+        // Button Hover Animation
+        const button = document.querySelector(".btn");
+        button.addEventListener("mouseenter", () => {
+            gsap.to(button, {
+                scale: 1.1,
+                duration: 0.3,
+            });
+        });
+
+        button.addEventListener("mouseleave", () => {
+            gsap.to(button, {
+                scale: 1,
+                duration: 0.3,
+            });
+        });
+    </script>
+</body>
+
+</html> 

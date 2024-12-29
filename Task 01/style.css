@@ -1,0 +1,139 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navigation Styling */
+.navbar {
+    margin-bottom: 20px;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar-nav .nav-item {
+        margin-right: 10px;
+    }
+}
+
+/* Left Section */
+.leftWrapper {
+    height: 100vh;
+    position: relative;
+}
+
+.leftWrapper .tri {
+    content: '';
+    position: absolute;
+    border-right: 100px solid #1A1C46;
+    border-top: 100vh solid transparent;
+    right: -30px;
+    transform: rotate(-8deg);
+    transform-origin: top center;
+    opacity: 0;
+}
+
+.leftBox {
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 450px;
+}
+
+.leftWrapper .leftBox h3 {
+    color: #383838;
+    font-weight: 800;
+    line-height: 1.4em;
+    margin-bottom: 20px;
+}
+
+.leftWrapper .leftBox p {
+    color: #9D9D9D;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.leftWrapper .leftBox button {
+    background-color: #383838;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px 28px;
+    margin-top: 25px;
+}
+
+/* Right Section */
+.rightWrapper {
+    background-color: #1A1C46;
+    color: #FFF;
+    position: relative;
+    height: 100vh;
+}
+
+.rightWrapper .rightBox {
+    position: absolute;
+    width: 80%;
+    left: 60%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rightWrapper .rightBox .rightimg img {
+    max-width: 110px;
+    padding-right: 15px;
+}
+
+.rightWrapper .rightBox .righttext {
+    width: 60%;
+}
+
+.rightWrapper .rightBox .righttext p {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.box1 {
+    width: 42%;
+    height: 175px;
+    border: 8px solid #FF9E00;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.box2 {
+    width: 42%;
+    height: 175px;
+    border: 8px solid #FF9E00;
+    position: absolute;
+    bottom: -5%;
+    left: -10%;
+    transform: translate(-50%, -50%);
+}
+
+/* Page-Specific Backgrounds */
+body.index {
+    background-color:white;
+}
+
+body.overview {
+    background-color: #f0f0f0;
+}
+
+body.contact {
+    background-color: #d0d0d0;
+}
+
+body.about {
+    background-color: #c0c0c0;
+}
